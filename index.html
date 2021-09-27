@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./data/style.css">
+    <link rel="stylesheet" href="./fontawesome-web/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400&display=swap" rel="stylesheet">
+    <title>Tienda 724</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="uk-flex uk-flex-between navbar-optionbox">
+        <div class="uk-flex uk-flex-middle">
+            <div uk-toggle="target: .menu-vertical-optionbox; cls: show" class="padding-horizontal-20">
+                <img class="icon-menu-dashed" src="./data/menu.png" alt="">
+            </div>
+            <div>
+                <img src="./data/tienda724.png" class="logo-size-optionbox" alt="">
+            </div>
+            <div class="uk-inline">
+                <div class="cursor-pointer uk-flex uk-flex-middle" style="margin-left: 60px;">
+                    <img class="logo-store-size-optionbox" src="./data/logo2.png " alt=" ">
+                    <i class="fas fa-caret-down font-size-17"></i>
+                </div>
+                <div uk-drop="mode: click">
+                    <div style="position: relative;">
+                        <div class="drop-store-optionbox">
+                            <!-- <ul class="uk-list " style="padding-bottom: 20px;">
+                                <h6 class="uk-margin-remove font-size-10" style="width: 65px; padding-bottom: 10px;">Documento del proveedor</h6>
+                                <div class="hr-tab"></div>
+                                <button class="button-search-supplier-optionbox uk-text-bold">Buscar proveedor</button>
+                                <h6 class=" uk-margin-remove font-size-10">Seleccione tienda proveedora</h6>
+                                <div class="select-supplier-optionbox">
+                                    <select>
+                                        <option>--</option>
+                                        <option>opción 1</option>
+                                        <option>opción 2</option>
+                                        <option>opción 3</option>
+                                        <option>opción 4</option>
+                                    </select>
+                                    <div class="select_arrow-supplier-optionbox">
+                                    </div>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Proveedor:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">--</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Documento:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">--000</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Teléfono:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">000</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Dirección:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">N/A</h6>
+                                </div>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-inline cursor-pointer padding-horizontal-30 uk-flex uk-flex-middle">
+            <button class="button-data-user-optionbox uk-flex uk-flex-middle">
+                <img class="logo-user-size-optionbox" src="./data/icono-de-usuario.png" alt=" ">
+                <h4 class="uk-text-bold uk-margin-remove color-red" style="padding-right: 5px;">Mireya Mopan</h4>
+                <i class="fas fa-caret-down "></i>
+            </button>
+            <div uk-drop="mode: click">
+                <div class="uk-card uk-card-body uk-card-default uk-box-shadow-large drop-data-user-optionbox">
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove">Roles activados:</h5>
+                        <h5 class="uk-margin-remove ">Propietario de la empresa</h5>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove ">Su documento es:</h5>
+                        <h5 class="uk-margin-remove ">CC: 55555555555001</h5>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove">Id de usuario:</h5>
+                        <h5 class="uk-margin-remove ">94518</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Menu vertical ERP-->
+    <div style="position: relative;">
+        <div class="menu-vertical-optionbox">
+            <ul class="uk-list" style="padding-bottom: 20px;">
+                <div class="uk-flex uk-flex-between">
+                    <div style="margin-left: 33px;">
+                        <h4 class="uk-margin-remove color-red uk-text-bold">ERP</h4>
+                        <h4 class="uk-margin-remove color-red uk-text-bold">Dashboard</h4>
+                    </div>
+                    <div style="padding-right: 5px;">
+                        <div uk-toggle="target: .menu-vertical-optionbox; cls: show" style="margin-right: 10px;">
+                            <i class=" fas fa-times font-size-17 color-red cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Inventario.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Inventario</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Reportes.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Reportes</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Terceros.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Tercero</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Contabilidad.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Contabilidad</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Pedidos.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Pedidos</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Crear-producto.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Crear producto</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Opciones-de-caja.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Opciones de caja</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Domicilios.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Domicilios</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/administracion-de-pedidos.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12" style="width: 100px;">Administracion de pedidos</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-optionbox">
+                        <img class="img-menu-vertical-size-optionbox" src="./data/Iconografía/Domicilios.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Mesas</h4>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- Movimiento de caja-->
+    <div style="display: inline;">
+        <!-- Contenido -->
+        <div class="main-container-optionbox">
+            <div class="uk-flex uk-flex-middle navbar-search-products-optionbox">
+                <div class="uk-flex uk-flex-center uk-flex-middle" style="padding-left: 30px; padding-top: 18px; height: 45px; border-bottom: 18px solid white;">
+                    <h4 class="uk-margin-remove uk-text-bold color-red-3">Opciones de caja</h4>
+                </div>
+                <div class="uk-flex uk-flex-middle uk-flex-center button-categories-optionbox" style="width: 180px !important;">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer uk-text-center" style="padding-top: 21px;">Movimiento de Caja</h6>
+                </div>
+                <div style="margin-left: 53px;">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer">Cierre de caja</h6>
+                </div>
+            </div>
+            <div>
+                <div style="margin-left: 30px; margin-top: 30px;">
+                    <h6 class="uk-margin-remove color-grey font-weight-500 font-size-15">Estas a punto de hacer un nuevo movimiento de caja.</h6>
+                </div>
+                <div class="uk-flex uk-flex-middle">
+                    <div style="margin-left: 30px;">
+                        <h6 class="uk-margin-remove font-size-9 ">Seleccione opción</h6>
+                        <div class="select-create-product-optionbox " style="width: 130px;">
+                            <select>
+                                    <option>Ingreso</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-optionbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 53px;">
+                        <h6 class="uk-margin-remove font-size-9 ">Cantidad</h6>
+                        <div class="select-create-product-optionbox " style="width: 130px;">
+                            <select>
+                                    <option>$0</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-optionbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px; margin-left: 50px; margin-bottom: 2px;">
+                        <input class="input-register-user-optionbox font-size-11" type="text" placeholder="Notas" style="width: 300px;">
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-middle">
+                    <div style="margin-left: 30px; margin-top: 5px;">
+                        <button class="button-search-actualice-optionbox" style="height: 25px; width: 170px; color: rgb(167, 48, 48);">Ver otros movimientos</button>
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 5px;">
+                        <button class="button-search-actualice-optionbox" style="height: 25px; width: 170px; color: grey;">Añadir movimiento</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cierre de caja -->
+    <div style="display: none">
+        <div class="main-container-optionbox">
+            <div class="uk-flex uk-flex-middle navbar-search-products-optionbox">
+                <div class="uk-flex uk-flex-center uk-flex-middle" style="padding-left: 40px; ">
+                    <h4 class="uk-margin-remove uk-text-bold color-red-3">Opciones de caja</h4>
+                </div>
+                <div>
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer uk-text-center" style="padding-left: 100px;">Movimiento de Caja</h6>
+                </div>
+                <div class="button-trademark-optionbox uk-flex uk-flex-middle uk-flex-center" style="margin-left: 60px; width: 150px;">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer" style="padding-top: 21px;">Cierre de caja</h6>
+                </div>
+            </div>
+            <div style="margin-top: 30px; margin-left: 70px;">
+                <div class="uk-flex uk-flex-middle">
+                    <div>
+                        <div class="uk-flex uk-flex-middle">
+                            <h6 class="uk-margin-remove color-red-two font-size-12">Tienda:</h6>
+                            <h6 class="uk-margin-remove font-size-12 padding-horizontal-10">Sysware</h6>
+                        </div>
+                        <div class="uk-flex uk-flex-middle padding-vertical-10">
+                            <h6 class="uk-margin-remove color-red-two font-size-12">Caja:</h6>
+                            <h6 class="uk-margin-remove font-size-12 padding-horizontal-20">1</h6>
+                        </div>
+                        <div class="uk-flex uk-flex-middle">
+                            <h6 class="uk-margin-remove color-red-two font-size-12">Cajero:</h6>
+                            <h6 class="uk-margin-remove font-size-12 padding-horizontal-10">Juan Botero</h6>
+                        </div>
+                        <div class="uk-flex uk-flex-middle padding-vertical-10">
+                            <h6 class="uk-margin-remove color-red-two font-size-12">Fecha apertura:</h6>
+                            <h6 class="uk-margin-remove font-size-12 padding-horizontal-10">31/10/2020 1:14</h6>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                    <div style="margin-left: 70px;">
+                        <div style=" margin-top: 13px ;margin-left: 40px; margin-bottom: 1px;">
+                            <h6 class="uk-margin-remove font-size-11 ">Cantidad en billetes</h6>
+                            <input class="input-register-user-optionbox-grey font-size-12" type="text" placeholder="0.00" style="width: 120px;">
+                        </div>
+                        <div style="margin-top: 0px; margin-left: 40px; margin-bottom: 10px;">
+                            <h6 class="uk-margin-remove font-size-11 ">Cantidad en monedas</h6>
+                            <input class="input-register-user-optionbox-grey font-size-12" type="text" placeholder="0.00" style="width: 120px;">
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 5px;">
+                    <button class="button-search-actualice-optionbox" style="height: 25px; width: 170px; color: black;">Cerrar Caja</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
